@@ -1,6 +1,7 @@
 package br.com.fiap.bean;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class SuperHeroi {
     private String nome, idSecreta;
@@ -46,5 +47,15 @@ public class SuperHeroi {
 
     public void setFraquezas(ArrayList<String> fraquezas) {
         this.fraquezas = fraquezas;
+    }
+
+    public void listaHeroi(){
+        String exibe = "Super Herói: " + nome + "Identidade Secreta: " + idSecreta;
+        Collections.sort(poderes);
+        Collections.sort(fraquezas);
+        int cont = 1;
+        for (String i : poderes ) {
+            exibe += "\nIntegrante " + cont + ": " + i;
+            cont++;
     }
 }
